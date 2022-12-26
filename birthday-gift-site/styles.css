@@ -1,0 +1,84 @@
+body {
+    font-family: 'Happy Monkey', cursive;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 1px black;
+    background:  linear-gradient(#C0685B, #FBBFA3);
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#png-wrapper {
+    display: block;
+    background: #ECD5B8;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#anya-avatar {
+    width: 150px;
+    border: 6px solid #322A27;
+    border-radius: 50%;
+    margin: 0;
+}
+
+#bday-date {
+    margin-top: 0;
+}
+
+#bday-age {
+    margin: 5px 0 10px 0;  
+}
+
+.gift-section {
+    margin-top: 50px;
+}
+
+.gift-title {
+    margin-bottom: 10px;
+}
+
+.gift-hint {
+    margin-top: 0;
+}
+
+.gift-img {
+    width:400px;
+    height:400px;
+    border: 8px solid #322A27;
+    background-image: url("https://www.bednersgreenhouse.com/wp-content/uploads/gift.jpeg");
+    background-size: cover;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+}
+
+#gift-img-happy:hover {
+    background-image: url("https://media.tenor.com/SlhWZ2ZfZgkAAAAC/subarashi-wakata.gif");
+}
+
+#gift-img-hot:hover {
+    background-image: url("https://media3.giphy.com/media/SdPXw3QGg39rG/giphy.gif?cid=ecf05e478drtpy8hoxwxtymnou953qdia92whgwa8w7mzzfi&rid=giphy.gif&ct=g");
+}
+
+#gift-img-genius:hover { 
+    background-image: url("https://media.tenor.com/dp_hQBGT0rIAAAAC/think-smart.gif");
+}
+
+#gift-img-badass:hover {
+    background-image: url("https://media.tenor.com/DksMfjrPUPgAAAAd/spy-x-family-loid-forger.gif");
+}
+
+#footer {
+    font-style: italic;
+    width: 400px;
+    margin: 40px auto 20px auto;
+    color: #322A27;
+}
+
+a {
+    color: inherit;
+}
