@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+#hero-section {
+    background-image: url("https://images.unsplash.com/photo-1609101111377-715d8006a8f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1928&q=80");
+    background-size: cover;
+    padding: 100px 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+#title, #hero-subtitle {
+    margin: 0;
+    border-radius: 10px;
+}
+
+#title {
+    background: #1D3557;
+    padding: 5px 10px;
+}
+
+#hero-subtitle {
+    
+    background: #457B9D;
+    padding: 5px 30px;
+}
+
+#activity-section {
+    background: #F1FAEE;
+    color: #1D3557;
+    padding: 40px;
+    text-align: center;
+}
+
+.activity-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.activity-title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+#guide-section {
+    padding: 50px 150px;
+    color: #1D3557;
+}
+
+.guide-card {
+    width: 400px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    background: #A8DADC;
+    box-shadow: 0px 6px 0px #1D3557;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.guide-img {
+    width: 180px;
+    border-radius: 10px;
+}
