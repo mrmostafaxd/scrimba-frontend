@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+    background-image: url("https://cpb-us-e1.wpmucdn.com/sites.psu.edu/dist/2/59626/files/2016/09/Counting-Sheep-1024x768-zoztvj.jpg");
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app-window {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(247,247,247,0.5);
+    max-width: 400px;
+    text-align: center;
+    color: #24325C;
+    text-shadow: 0 0 1px black;
+}
+
+#sheep-count {
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#count-btn {
+    background: #529961;
+
+}
+
+#save-btn {
+    background: #9BC65F;
+}
