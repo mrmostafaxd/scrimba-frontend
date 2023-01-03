@@ -8,22 +8,28 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- Timer -->
+    <div class="container container-timer">
+        <div id="minute-count" class="disp disp-timer">00</div>
+        <div>:</div>
+        <div id="second-count" class="disp disp-timer">00</div>
+    </div>
+    <!-- Scores -->
+    <div class="container container-score">
         <div class="team-card">
             <h2>HOME</h2>
-            <div id="home-score" class="score-disp">0</div>
+            <div id="home-score" class="disp disp-score">0</div>
             <button onclick="add('home','1')">+1</button>
             <button onclick="add('home','2')">+2</button>
             <button onclick="add('home','3')">+3</button>
         </div>
         <div class="team-card">
             <h2>GUEST</h2>
-            <div id="guest-score" class="score-disp">0</div>
+            <div id="guest-score" class="disp disp-score">0</div>
             <button onclick="add('guest','1')">+1</button>
             <button onclick="add('guest','2')">+2</button>
             <button onclick="add('guest','3')">+3</button>
         </div>
-
     </div>
     <div>
         <button onclick="newGame()">New Game</button>

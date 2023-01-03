@@ -1,14 +1,17 @@
 const homeScore = document.getElementById("home-score");
 const guestScore = document.getElementById("guest-score");
+const timeMinute = document.getElementById("minute-count");
+const timeSecond = document.getElementById("second-count");
+
 const LEADING_CLASS = "leading";
 
 let valueHome = +homeScore.textContent;
 let valueGuest = +guestScore.textContent;
 
-console.log(homeScore.textContent);
-console.log(guestScore.textContent);
+let seconds = 0
 
 
+// -------- Score functions ------------ //
 // reset leading score highlighting so that the two players have the same color
 function resetLeading() {
     if (homeScore.classList.contains(LEADING_CLASS)) {
@@ -23,12 +26,12 @@ function resetLeading() {
 // highlight the leading score owner
 function highlightLeading() {
     resetLeading();
-    if(valueHome > valueGuest) {
+    if (valueHome > valueGuest) {
         homeScore.classList.toggle(LEADING_CLASS);
     } else if (valueGuest > valueHome) {
         guestScore.classList.toggle(LEADING_CLASS);
     }
-}    console.log("here reset")
+}
 
 // add score based on who scored with the value value
 function add(type, value) {
@@ -44,12 +47,47 @@ function add(type, value) {
     highlightLeading();
 }
 
-function newGame() {
-    resetLeading();
+// reset team scores
+function resetScore() {
+    resetLeading()
 
     homeScore.textContent = 0;
     valueHome = 0;
 
     guestScore.textContent = 0;
     valueGuest = 0;
+}
+
+// -------- Timer functions ------------ //
+let timer = setInterval(upTimer, 1000);
+
+function resetTimer() {
+    seconds = -1;
+    
+    timeMinute.textContent = "00";
+    timeSecond.textContent = "00";
+}
+
+function upTimer() {
+    ++seconds;
+
+    let minute = Math.floor(seconds / 60);
+    let updSecond = seconds - (minute * 60);
+
+    if (minute == 25) {
+        resetTimer()
+    } else {
+        minute = minute.toString().padStart(2,'0');
+        timeMinute.textContent = minute;
+
+        updSecond = updSecond.toString().padStart(2,'0');
+        timeSecond.textContent = updSecond;
+    }
+
+}
+
+// -------- New Game ------------ //
+function newGame() {
+    resetScore();
+    resetTimer();
 }

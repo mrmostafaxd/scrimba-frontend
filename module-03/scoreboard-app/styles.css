@@ -15,10 +15,11 @@ h2 {
     font-size: 40px;
     margin-bottom: 20px;
     margin-top: 0;
-    line-height: 40px;
 }
 
-button, .score-disp {
+button, 
+.disp,
+.container-timer {
     font-family: "Cursed Timer ULiL Font",  sans-serif;
 }
 
@@ -37,25 +38,44 @@ button:active {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 70px;
     margin-bottom: 20px;
 }
 
-.team-card,.score-disp {
+.container-timer {
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 90px;
+}
+
+.disp {
+    background: #232c32;
+    font-weight: 400;
+    padding: 5px 0;
+    font-size: 90px;
+    margin-bottom: 25px;
+    line-height: 120px;
+    padding-top: 20px;
+}
+
+.disp-timer {
+    color: #F94F6D;
+    width: 120px;
+}
+
+.container-score {
+    justify-content: space-evenly;
+}
+
+.team-card,.disp-score {
     width: 180px;
 }
 
-.score-disp {
-    background: #232c32;
+.disp-score {
     color: #f45b21;
-    font-size: 90px;
-    font-weight: 400;
-    margin-bottom: 25px;
-    padding: 5px 0;
-    line-height: 120px;
 }
 
 .leading {
-    color: #f58b00;
+    color: #ffa733;
 }
