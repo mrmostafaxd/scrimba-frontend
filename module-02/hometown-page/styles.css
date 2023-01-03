@@ -2,15 +2,22 @@ body {
     margin: 0;
     font-family: 'Sora', sans-serif;
 }
+h2 {
+    margin-bottom: 40px;
+}
+
+#hero-section,
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #hero-section {
     background-image: url("https://images.unsplash.com/photo-1609101111377-715d8006a8f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1928&q=80");
     background-size: cover;
     padding: 100px 150px;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
     text-align: center;
 }
@@ -21,12 +28,11 @@ body {
 }
 
 #title {
-    background: #1D3557;
+    background: #284773;
     padding: 5px 10px;
 }
 
 #hero-subtitle {
-    
     background: #457B9D;
     padding: 5px 30px;
 }
@@ -34,7 +40,7 @@ body {
 #activity-section {
     background: #F1FAEE;
     color: #1D3557;
-    padding: 40px;
+    padding: 10px 20px;
     text-align: center;
 }
 
@@ -42,13 +48,6 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-
-}
-
-.activity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .activity-img {
@@ -59,12 +58,12 @@ body {
 
 .activity-title {
     margin-top: 15px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-weight: 700;
 }
 
 #guide-section {
-    padding: 50px 150px;
+    padding: 50px 0px;
     color: #1D3557;
 }
 
