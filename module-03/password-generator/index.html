@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Password generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate a<br> <span id="title-span">random password</span></h1>
+        <p id="subtitle">Never use an insecure password again.</p>
+        <fieldset>
+            <legend>Settings</legend>
+            <div class="setting-item">
+                <label for="password-length">Password length</label>
+                <input type="number" id="password-length" style="width:40px" min="4" max="18" value="8" onKeyDown="return false">
+            </div>
+            <div class="setting-item">
+                <input type="checkbox" id="symbol-allow" checked>
+                <label for="symbol-allow">Allow Symbols (!@#$%^&*()+)</label>
+            </div>
+            <div class="setting-item">
+                <input type="checkbox" id="number-allow" checked>
+                <label for="number-allow">Allow Numbers (0-9)</label>
+            </div>
+            <div class="setting-item">
+                <input type="checkbox" id="lowercase-allow" checked>
+                <label for="lowercase-allow">Allow Lowercase (abc)</label>
+            </div>
+            <div class="setting-item">
+                <input type="checkbox" id="uppercase-allow" checked>
+                <label for="uppercase-allow">Allow Uppercase (ABC)</label>
+            </div>
+        </fieldset>
+        <button id="btn-generate" onclick="generatePasswords()">Generate passwords</button>
+        <span id="error"></span>
+        <hr>
+        <div class="password-container">
+            <div id="first-pass" class="password empty"></div>
+            <div id="second-pass" class="password empty"></div>
+        </div>
+        <script src="./index.js"></script>
+    </div>
+
+</body>
+
+</html>
