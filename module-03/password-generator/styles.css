@@ -39,6 +39,9 @@ fieldset {
     margin-bottom: 5px;
 }
 
+.check {
+    accent-color: #10B981;
+}
 
 button {
     background: #10B981;
