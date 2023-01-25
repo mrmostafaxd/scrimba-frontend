@@ -115,3 +115,6 @@ function shuffle(array) {
   
     return array;
 }
+
+// when the website loads
+generatePasswords();
