@@ -1,7 +1,16 @@
 # Link Save chrome extension
+## Table of content
+- [Description](#description)
+- [How to install](#how-to-install)
+- [how to use](#how-to-use)
 
 ## Description
 A chrome extension that allows users to save links by inputting them into an input text field. The extension also includes the ability to save the current active tab and remove all saved links. This extension can be used as a simple and convenient way for users to save and organize relevant web links.
+
+[(return to top)](#link-save-chrome-extension)
+
+## How to install
+![how to install](./images/how-to-install.gif)
 
 [(return to top)](#link-save-chrome-extension)
 
