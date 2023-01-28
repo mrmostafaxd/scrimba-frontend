@@ -12,7 +12,8 @@ const posts = [
         avatar: "images/avatar-vangogh.jpg",
         post: "images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
-        likes: 21
+        likes: 21,
+        isLiked: false
     },
     {
         name: "Gustave Courbet",
@@ -21,7 +22,8 @@ const posts = [
         avatar: "images/avatar-courbet.jpg",
         post: "images/post-courbet.jpg",
         comment: "i'm feelin a bit stressed tbh",
-        likes: 4
+        likes: 4,
+        isLiked: false
     },
         {
         name: "Joseph Ducreux",
@@ -30,7 +32,8 @@ const posts = [
         avatar: "images/avatar-ducreux.jpg",
         post: "images/post-ducreux.jpg",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
+        likes: 152,
+        isLiked: false
     }
 ]
 
@@ -39,148 +42,64 @@ const posts = [
 /*       main functions        */
 /////////////////////////////////
 
-function createImage(imgLocation, imgAlt="", additionalClasses="", index=-1) {
-    const image = document.createElement("img");
-    
-    image.src = imgLocation;
-    if (imgAlt !== "")
-        image.alt = imgAlt;
-    if (additionalClasses !== "")
-        image.className = additionalClasses;
-    
-    // The index is used to identify which post is being interacted with
-    //     for adding likes
-    if (index !== -1)
-        image.dataset.index = index;
-
-    return image;
+// create post as string
+function createPost(postEl, index) {
+    const {name, username, location, avatar, post, comment, likes} = postEl;
+    return `
+    <article>
+        <header class="article-header">
+            <img class="user-img" src="${avatar}" alt="${name}'s profile picture">
+            <div>
+                <p class="accent-text">${name}</p>
+                <p>${location}</p>
+            </div>
+        </header>
+        <img class="post-img" src="${post}" alt="${name} oil painting" data-name="post" data-index="${index}">
+        <div class="container">
+            <img class="select react-img" src="./images/icon-heart.png" alt="like icon" data-name="like"  data-index="${index}">
+            <img class="react-img" src="./images/icon-comment.png" alt="comment icon" data-name="comment" data-index="${index}">
+            <img class="react-img" src="./images/icon-dm.png" alt="send icon" data-name="send" data-index="${index}">
+            <p class="post-text accent-text" data-index="${index}">${likes} likes</p>
+            <p class="post-text"><span class="accent-text">${username}</span> ${comment}</p>
+        </div>
+    </article>
+    `;
 }
 
-function createPargraph(content, additionalClasses="", index=-1) {
-    const paragraph = document.createElement("p");
-
-    paragraph.textContent = content;
-    if (additionalClasses !== "")
-        paragraph.className = additionalClasses;
-    
-    // The index is used to identify which post is being interacted with
-    //     for adding likes
-    if (index !== -1)
-        paragraph.dataset.index = index;
-    
-    return paragraph;
+// render post string on screen
+function renderPosts(posts) {
+    let postHTML = posts.map((el, index) => createPost(el, index));
+    main.innerHTML = postHTML;
 }
 
-function createPostHeader(posterName, posterLocation, posterAvatar) {
-
-    // create the header and add to it the article header class
-    //    <header class="article-header"></header>
-    const postHeader = document.createElement("header");
-    postHeader.classList.add("article-header");
-
-    // create the image with the poster avatar and add to it the user img class
-    //    <img class="user-img" src="posterAvatar" alt="posters's profile picture">
-    const posterImage = createImage(posterAvatar, `${posterName}'s profile picture`, "user-img");
-
-    // create the div container for poster's name and location
-    const posterInfoContainer = document.createElement("div");
-    
-    // create the poster's name paragraph with the accent class
-    //    <p class="accent-text"></p>
-    const posterNameParag = createPargraph(posterName, "accent-text");
-
-    // create the poster's location paragraph
-    const posterLocationParag = createPargraph(posterLocation);
-
-    // append the name and the location to the div container
-    posterInfoContainer.append(posterNameParag, posterLocationParag);
-
-    // append the poster info container and the poster's image to the header
-    postHeader.append(posterImage, posterInfoContainer);
-    
-    return postHeader;
+// change the number of likes based on the event listener
+function renderLikes(index, likes) {
+    const likesParag = document.querySelector(`p.post-text[data-index="${index}"]`);
+    likesParag.textContent = `${likes} likes`;
 }
 
-function createPostFooter(postLikes, userName, postComment, index) {
-    // create the footer div container
-    const postFooterContainer = document.createElement("div");
-    postFooterContainer.classList.add("container");
+const time_1 = performance.now();
+renderPosts(posts);
 
-    // create the fav image
-    const favImage = createImage("./images/icon-heart.png", "fav icon", "react-img", index);
 
-    // create the comment image
-    const commentImage = createImage("./images/icon-comment.png", "comment icon", "react-img", index);
-    
-    // create the send image
-    const sendImage = createImage("./images/icon-dm.png", "send icon", "react-img", index);
+// /////////////////////////////////
+// /*       Event Handling        */
+// /////////////////////////////////
 
-    // create the likes paragraph
-    //     <p class="post-text accent-text"></p>
-    const likesParag = createPargraph(`${postLikes} likes`, "post-text accent-text", index);
-
-    // create the comment paragraph
-    //    <p class="post-text"><span class="accent-text"></span></p>
-    const commentParag = document.createElement("p");
-    commentParag.innerHTML = `<span class="accent-text">${userName}</span> ${postComment}`;
-
-    // append the react icons, the likes and the comment to the post footer container
-    postFooterContainer.append(favImage, commentImage, sendImage, likesParag, commentParag);
-
-    return postFooterContainer;
-}
-
-// create a single Oldagram post 
-function createPost(post, index) {
-    const article = document.createElement("article");
-
-    // create the header of the post
-    const postHeader = createPostHeader(post.name, post.location, post.avatar);
-
-    // create the content of the post
-    const postImg = createImage(post.post, `${post.name}'s oil painting`, "post-img", index);
-    
-    // create the footer of the post
-    const postFooter = createPostFooter(post.likes, post.username, post.comment, index);
-
-    // append the header, the content and the footer to the article
-    article.append(postHeader, postImg, postFooter);
-
-    return article;
-}
-
-// render the posts to the viewport
-function renderContent(posts) {
-    // using fragment to perform the operation away from the DOM
-    //    to prevent excessive reflowing and repainting (increase the performance)
-    const frag = document.createDocumentFragment();
-    for (let i = 0; i < posts.length; i++) {
-        const postArticle = createPost(posts[i], i);
-        frag.appendChild(postArticle);
+function eventLike(evt, elName) {
+    if (evt.target.dataset.name && evt.target.dataset.name === elName) {
+        if (posts[evt.target.dataset.index].isLiked) {
+            posts[evt.target.dataset.index].likes--;
+        } else {
+            posts[evt.target.dataset.index].likes++;
+        }
+        posts[evt.target.dataset.index].isLiked = !posts[evt.target.dataset.index].isLiked;
+        renderLikes(evt.target.dataset.index, posts[evt.target.dataset.index].likes);
     }
-    main.appendChild(frag);
 }
 
-renderContent(posts);
+main.addEventListener("click", e => eventLike(e,"like"));
+main.addEventListener("dblclick", e => eventLike(e, "post"));
 
-
-/////////////////////////////////
-/*       Event Handling        */
-/////////////////////////////////
-
-for (let i = 0; i < posts.length; i++) {
-    // by default the first item with the class react-img is the fav button
-    const favIcon = document.querySelector(`.react-img[data-index="${i}"]`);
-    const postImage = document.querySelector(`.post-img[data-index="${i}"]`);
-    const likesParag = document.querySelector(`p.post-text[data-index="${i}"]`);
-
-    favIcon.addEventListener("click", function(){
-        posts[i].likes++;
-        likesParag.textContent = `${posts[i].likes} likes`
-    });
-
-    postImage.addEventListener("dblclick", function(){
-        posts[i].likes++;
-        likesParag.textContent = `${posts[i].likes} likes`
-    });
-}
+const time_2 = performance.now();
+console.log(`method two takes ${time_2 - time_1}`);
