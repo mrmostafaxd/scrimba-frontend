@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>World's most annoyning cookie consent</title>
+</head>
+
+<body>
+    <header class="container">
+        <h1>Learning to code? This is the most important thing you will ever read!</h1>
+    </header>
+    <main>
+        <section class="container">
+            <ul>
+                <li class="li-green">💰 Land a job with a 6 figure salary</li>
+                <li class="li-yellow">💻 Master JavaScript in 3 hours</li>
+                <li class="li-blue">⚛️ Learn React in 10 minutes</li>
+                <li class="li-pink">☕ Be a NodeJS Dev by lunchtime</li>
+            </ul>
+            <h3>My subliminal learning technique worked for Mark Zuckerberg and Albert Einstein, and it can work for
+                you!</h3>
+            <img class="section-img" src="./images/bugatti.jpg"
+                alt="White Bugatti car parking parking in front of a shop">
+            <p>Want a great job in tech? Want a six-figure salary? Then you have come to the right place. I am going to
+                tell you all you need to know to get all of that and much more, without you lifting a finger. You can
+                learn passively. Just sit back, close your eyes, and let the sound of my voice make the code sink deep
+                into your brain.</p>
+        </section>
+    </main>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-close-btn-container">
+            <button class="modal-close-btn" disabled>X</button>
+        </div>
+        <div id="modal-inner" class="modal-inner">
+            <h2>We ❤️ Your Data!</h2>
+            <p id="modal-text" class="modal-text">We have a strict policy on tracking and spamming: we'll definitely track you, and
+                we'll definitely spam you. To use this site, enter your name and email address and accept our ridiculous
+                terms and conditions.</p>
+            <form id="modal-form">
+                <input 
+                    type="text" 
+                    id="userFullName" 
+                    name="userFullName" 
+                    placeholder="Enter your full name"
+                    aria-label="Full name"
+                    required
+                >
+                <input 
+                    type="text" 
+                    id="userEmail" 
+                    name="userEmail" 
+                    placeholder="Enter your email"
+                    aria-label="Email address"
+                    required
+                >
+                <div class="modal-form-btns">
+                    <button type="submit" class="modal-btn">Accept</button>
+                    <button type="button" id="modal-decline-btn" class="modal-btn">Decline</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
