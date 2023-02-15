@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background: #f5ebdc;
+    color: #23180e;
+}
+
+/* typography */
+
+h1, h2, h3 {
+    font-weight: 800;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    margin: 25px;
+    color: #2D2B28;
+}
+
+
+/* layout */
+
+header,
+.get-image-btn {
+    background: #5B3F24;
+}
+
+header {
+
+    color: #F3EFE6;
+}
+
+.header-inner {
+    width: 370px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
+
+.logo-img {
+    width: 80px;
+}
+
+.section-container {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.radio-container {
+    border: 1px solid #c2b7ad;
+    border-radius: 5px;
+}
+
+.radio,
+.gif-only-container {
+    display: flex;
+    align-items: center;
+}
+
+button,
+label,
+input {
+    cursor: pointer;
+}
+
+input {
+    margin: 0;
+}
+
+.radio {
+    padding: 4px 8px;
+    border-bottom: 1px solid #c2b7ad;
+}
+
+.radio:last-child {
+    border-bottom: none;
+}
+
+.highlight {
+    background: #F8ABA0;
+    font-weight: 800;
+    accent-color: #FD2B28;
+}
+
+label {
+    /* padding to make the whole choice cursor:pointer */
+    padding: 3px;
+    width: 100%;
+}
+
+.gif-only-container {
+    justify-content: center;
+    margin: 16px;
+    accent-color: #4340F5;
+}
+
+.get-image-btn {
+    margin: 0 0 10px 0;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 20px;
+    color:#fff6e7;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.get-image-btn:hover,
+.get-image-btn:focus {
+    background: #3f2c19;
+    color: #fdfcf9;
+}
+
+
+/* modal */
+
+.modal {
+    display: none;
+    background: #f5ddba;
+    width: 420px;
+    height: 490px;
+    position: fixed;
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    border: 1px solid #867e77;
+
+}
+
+.modal-display {
+    display: block !important;
+}
+
+.modal-close-btn {
+    background: inherit;
+    font-size: 16px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: 2px solid #867e77;
+    border-radius: 50%;
+}
+
+.modal-close-btn:hover {
+    background: red;
+    color: #F3EFE6;
+}
+
+.modal-inner {
+    margin: 40px auto;
+    width: 80%;
+}
+
+.cat-img {
+    width: 100%;
+    max-height: 420px;
+    border-radius: 5px;
+}

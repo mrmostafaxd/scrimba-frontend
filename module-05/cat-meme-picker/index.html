@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Cat Meme Picker</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <img class="logo-img" src="./images/cat-logo.png" alt="brown kitten lying on its side">
+            <div>
+                <h2>Kitten's Purrfect...</h2>
+                <h1>Meme Picker</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h3>Select Your Current Emotion</h3>
+            <div class="section-container">
+                <div id="radio-container" class="radio-container">
+                </div>
+                <div class="gif-only-container">
+                    <label class="gif-only-label" for="gif-only">Animated GIFs only</label>
+                    <input type="checkbox" id="gif-only">
+                </div>
+                <button id="get-image-btn" class="get-image-btn">Get Image</button>
+            </div>
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <button id="modal-close-btn" class="modal-close-btn">X</button>
+        <div id="modal-inner" class="modal-inner">
+            <img class="cat-img" src="./images/angry.jpeg">
+        </div>
+    </div>
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>
