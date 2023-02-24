@@ -31,3 +31,4 @@ Repository for all the challenges and projects from Scrimba's [frontend path](ht
 | Annoying Cookie Consent | [directory](./module-05/annonying-cookie-consent) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/annonying-cookie-consent/index.html)
 | Cat Meme Picker | [directory](./module-05/cat-meme-picker) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/cat-meme-picker/index.html) |
  Twimba | [directory](./module-05/twimba) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/twimba/index.html) |
+| Restaurant Ordering App | [directory](./module-05/restaurant-ordering-app) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/restaurant-ordering-app/index.html) |
