@@ -3,6 +3,7 @@ const modal = document.getElementById('modal');
 const modalInner = document.getElementById('modal-inner');
 const modalForm = document.getElementById('modal-form');
 const modalText = document.getElementById('modal-text');
+const modalDeclineBtn = document.getElementById('modal-decline-btn');
 
 // main //
 setTimeout(() => modal.style.display = 'inline', 1500);
@@ -36,4 +37,9 @@ modalForm.addEventListener('submit', evt => {
         `;     
     }, 3000);
 
+});
+
+// event handling //
+modalDeclineBtn.addEventListener('mouseenter', () => {
+    modalDeclineBtn.parentElement.classList.toggle('modal-form-btns-reverse');
 });
