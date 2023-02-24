@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*------------*/
+/* typography */
+/*------------*/
+
+h1 {
+    margin: 0 0 10px 0;
+    color: #0F8CDF;
+    font-size: 20px;
+}
+
+
+/*--------*/
+/* layout */
+/*--------*/
+
+header, main {
+    width: 290px;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.add-tweet-area {
+    display: flex;
+    /* to prevent stretching for the profile pic */
+    align-items: flex-start;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 10px;
+    /* remember flexbox is not affected by margin collapsing */
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    resize: none;
+}
+
+button {
+    background: #1DA1F2;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* tweets */
+
+.tweet,
+.reply,
+.add-reply {
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+}
+
+.tweet {
+    margin: 15px 0;
+}
+
+.tweet-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tweet-details {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.tweet-detail {
+    display: flex;
+    gap: 5px;
+}
+
+.fa-solid {
+    color: darkgray;
+}
+
+/* replies */
+.replies {
+    margin-left: 40px;
+}
+
+.reply,
+.add-reply {
+    margin: 10px 0;
+}
+
+/* images */
+
+.profile-pic {
+    width: 48px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+/* icons */
+
+i {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.liked {
+    color: red;
+}
+
+.retweeted {
+    color: limegreen;
+}
+
+/* other */
+.hidden {
+    display: none;
+}
