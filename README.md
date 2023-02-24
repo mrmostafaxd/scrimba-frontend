@@ -16,4 +16,4 @@ The main index can be accessed from [link](https://merry-kataifi-dfcaa9.netlify.
 | ------- | ------ | ---- |
 | Counter App | Not Added | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/counter-app/index.html) |
 | Basketball Scoreboard | Not Added | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/scoreboard-app/index.html) |
-| Password Generator | [Readme](./module-03/password-generator/README.md) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/password-generator/) |
+| Password Generator | [Readmee](./module-03/password-generator/README.md) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/password-generator/) |
