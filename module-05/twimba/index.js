@@ -1,20 +1,21 @@
 import { tweetsData } from "./data.js";
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-/* global variables */
 
-/* global functions */
+///////////////////////////////////
+/*         Main Functions        */
+///////////////////////////////////
 
-/* main functions */
 
+renderFeed();
+
+// render tweets on screen
 function renderFeed() {
     const feed = document.getElementById('feed');
     feed.classList.add('hidden');
     feed.innerHTML = getTweetsHtml();
     feed.classList.remove('hidden');
 }
-
-renderFeed();
 
 function getTweetsHtml() {
     let tweetHtml = "";
@@ -83,7 +84,11 @@ function getTweetsHtml() {
     return tweetHtml;
 }
 
-/* event handler */
+
+///////////////////////////////////
+/*         Event Handling        */
+///////////////////////////////////
+
 document.addEventListener('click', evt => {
     if (evt.target.dataset.like) {
         handleLikeClick(evt.target.dataset.like);
@@ -95,7 +100,7 @@ document.addEventListener('click', evt => {
     } else if (evt.target.id === "tweet-btn") {
         addTweet();
     } else if (evt.target.id.includes("reply-btn-", 0)) {
-        console.log("reply button pressed" + evt.target.id.substring(10));
+        // if a reply button is pressed add the reply
         addReply(evt.target.id.substring(10));
     }
 })
@@ -120,6 +125,7 @@ function handleReplyClick(tweetId) {
 
 function addTweet() {
     const tweetInput = document.getElementById('tweet-input');
+    // check if tweet empty
     if (!tweetInput.value.trim()) {
         return;
     }
@@ -143,6 +149,7 @@ function addTweet() {
 
 function addReply(tweetId) {
     const replyInput = document.getElementById(`reply-input-${tweetId}`);
+    // check if reply empty
     if(!replyInput.value.trim())  {
         return;
     }
