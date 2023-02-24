@@ -1,5 +1,5 @@
-# scrimba-frontend
-repository for all the challenges and projects from Scrimba Frontend Path.
+# Scrimba Frontend
+Repository for all the challenges and projects from Scrimba's [frontend path](https://scrimba.com/learn/frontend).
 
 ## Projects Index
 ### Module 02
