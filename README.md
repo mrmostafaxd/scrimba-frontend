@@ -19,3 +19,10 @@ The main index can be accessed from [link](https://merry-kataifi-dfcaa9.netlify.
 | Password Generator | [directory](./module-03/password-generator) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/password-generator/) |
 | Link Save (Chrome extension) | [directory](./module-03/chrome-extension) | Not added |
 | Metric/Imperial Unit Conversion | [directory](./module-03/unit-converter) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/unit-converter/index.html) |
+
+### Module 04
+| Project | GitHub Directory | URL |
+| ------- | ------ | ---- |
+| NFT site | [directory](./module-04/nft-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/nft-site/index.html) |
+| Oldagram | [directory](./module-04/oldagram) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/oldagram/index.html) |
+| Coworking Space Website | [directory](./module-04/coworking-space-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/coworking-space-site/index.html) |
