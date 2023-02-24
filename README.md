@@ -9,6 +9,8 @@ Repository for all the challenges and projects from Scrimba's [frontend path](ht
 | Birthday Gift Site | [directory](./module-02/birthday-gift-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-02/birthday-gift-site/index.html) |
 | Hometown Page | [directory](./module-02/hometown-page) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-02/hometown-page/index.html) |
 
+[(return to top)](#scrimba-frontend)
+
 ### Module 03
 | Project | GitHub Directory | URL |
 | ------- | ------ | ---- |
@@ -18,12 +20,16 @@ Repository for all the challenges and projects from Scrimba's [frontend path](ht
 | Link Save (Chrome extension) | [directory](./module-03/chrome-extension) | Not added |
 | Metric/Imperial Unit Conversion | [directory](./module-03/unit-converter) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-03/unit-converter/index.html) |
 
+[(return to top)](#scrimba-frontend)
+
 ### Module 04
 | Project | GitHub Directory | URL |
 | ------- | ------ | ---- |
 | NFT site | [directory](./module-04/nft-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/nft-site/index.html) |
 | Oldagram | [directory](./module-04/oldagram) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/oldagram/index.html) |
 | Coworking Space Website | [directory](./module-04/coworking-space-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/coworking-space-site/index.html) |
+
+[(return to top)](#scrimba-frontend)
 
 ### Module 05
 | Project | GitHub Directory | URL |
@@ -32,3 +38,5 @@ Repository for all the challenges and projects from Scrimba's [frontend path](ht
 | Cat Meme Picker | [directory](./module-05/cat-meme-picker) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/cat-meme-picker/index.html) |
  Twimba | [directory](./module-05/twimba) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/twimba/index.html) |
 | Restaurant Ordering App | [directory](./module-05/restaurant-ordering-app) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/restaurant-ordering-app/index.html) |
+
+[(return to top)](#scrimba-frontend)
