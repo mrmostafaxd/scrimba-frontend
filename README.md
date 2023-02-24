@@ -1,8 +1,6 @@
 # scrimba-frontend
 repository for all the challenges and projects from Scrimba Frontend Path.
 
-The main index can be accessed from [link](https://merry-kataifi-dfcaa9.netlify.app/).
-
 ## Projects Index
 ### Module 02
 | Project | GitHub Directory | URL |
@@ -26,3 +24,10 @@ The main index can be accessed from [link](https://merry-kataifi-dfcaa9.netlify.
 | NFT site | [directory](./module-04/nft-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/nft-site/index.html) |
 | Oldagram | [directory](./module-04/oldagram) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/oldagram/index.html) |
 | Coworking Space Website | [directory](./module-04/coworking-space-site) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-04/coworking-space-site/index.html) |
+
+### Module 05
+| Project | GitHub Directory | URL |
+| ------- | ------ | ---- |
+| Annoying Cookie Consent | [directory](./module-05/annonying-cookie-consent) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/annonying-cookie-consent/index.html)
+| Cat Meme Picker | [directory](./module-05/cat-meme-picker) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/cat-meme-picker/index.html) |
+ Twimba | [directory](./module-05/twimba) | [link](https://merry-kataifi-dfcaa9.netlify.app/module-05/twimba/index.html) |
