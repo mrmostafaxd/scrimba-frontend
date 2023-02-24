@@ -1,0 +1,237 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* typography */
+
+.m-0 {
+    margin: 0;
+}
+
+h1,
+.header-subtitle {
+    color: white;
+}
+
+.font-smythe-normal {
+    font-family: 'Smythe', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.fs-28 {
+    font-size: 28px;
+    
+}
+
+.ingredient {
+    margin: 8px 0;
+}
+
+.price,
+.tab-price {
+    font-size: 20px;
+}
+
+.food-icon {
+    font-size: 79px;
+}
+
+.modal-title {
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+
+/* layout */
+
+header {
+    background-image: url('./images/header.png');
+    background-size: cover;
+    padding: 46px;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.food-items,
+.final-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.light-button {
+    width: 100%;
+    padding: 16px 32px;
+    background: #16DB99;
+    font-weight: 700;
+    color: #FFFFFF;
+    border: none;
+}
+
+.light-button:active {
+    background: #11b07b;
+}
+
+/* food items */
+
+.food-items {
+    padding-top: 20px;
+}
+
+.food-item {
+    padding: 50px 0;
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.add-food-btn {
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: auto;
+    align-self: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    color: #3C3C3C;
+    border: 1.5px solid #DEDEDE;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.add-food-btn:active {
+    background: rgb(228, 228, 228);
+}
+
+/* tab */
+
+.tab-header {
+    text-align: center;
+    margin: 0 0 35px 0;
+}
+
+.selected-items {
+    padding: 30px 0;
+    border-bottom: 2px solid #393333;
+}
+
+.selected-item,
+.total-price-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #BBBBBB;
+}
+
+.remove-item-btn:active {
+    color: #7f7f7f;
+}
+
+.tab-price {
+    margin-left: auto;
+}
+
+.total-price-container {
+    margin: 15px 0 50px 0;
+}
+
+/* thanks */
+
+.thanks-container {
+    text-align: center;
+    background: #ECFDF5;
+    padding: 20px 30px;
+}
+
+.thanks {
+    font-size: 32px;
+}
+
+.rating {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.fa-star {
+    cursor: pointer;
+}
+
+.checked {
+    color: orange;
+}
+
+/* modal */
+
+.modal {
+    display: none;
+    background: white;
+    width: 524px;
+    max-height: 542px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 30px 25px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.modal-inner,
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-inner {
+    gap: 45px;
+}
+
+form {
+    gap: 25px;
+}
+
+input,
+.pay-btn {
+    width: 100%;
+    font-size: 20px;
+}
+
+input {
+    
+    padding: 16px 26px;
+    box-sizing: border-box;
+}
+
+.pay-btn {
+    margin-top: auto;
+}
+
+
