@@ -8,6 +8,7 @@ const paymentForm = document.getElementById('payment-form');
 const modal = document.getElementById('modal');
 
 const selectedItems = [];
+let isModalOpened = false;
 
 
 /* main functions */
@@ -32,7 +33,7 @@ function getMenuHtml() {
             <button id="item-btn-${item.id}" class="add-food-btn" data-id="${item.id}">+</button>
         </div>
         `;
-    })
+    });
 
     return menuHtml;
 }
@@ -42,7 +43,7 @@ function getMenuHtml() {
 paymentForm.addEventListener('submit', evt => {
     evt.preventDefault();
 
-    modal.style.display = "none";
+    toggleModal(false);
     selectedItems.splice(0, selectedItems.length);
 
     const paymentFormData = new FormData(paymentForm);
@@ -56,12 +57,25 @@ document.addEventListener('click', evt => {
     } else if (evt.target.id.includes('remove-btn-', 0)) {
         removeItemFromTab(evt.target.dataset.remove);
     } else if (evt.target.id === "complete-order-btn") {
-        modal.style.display = "block";
+        toggleModal(true);
     } else if (evt.target.dataset.star) {
         addRating(evt.target.dataset.star);
+    } else if (isModalOpened && !modal.contains(evt.target)) {
+        // close payment modal if user clicked outside the modal
+        toggleModal(false);
     }
 });
 
+
+function toggleModal(openModal) {
+    if (openModal) {
+        modal.style.display = "block";
+        isModalOpened = true;
+    } else {
+        modal.style.display = "none";
+        isModalOpened = false;
+    }
+}
 
 function renderThanks(customerName) {
     let thanksHtml = `
@@ -83,7 +97,7 @@ function renderThanks(customerName) {
 
 // display the thanks and rating or the tab
 function renderFinalContainer(html) {
-    const finalContainer = document.getElementById('final-container')
+    const finalContainer = document.getElementById('final-container');
     
     finalContainer.style.display = "none";
     finalContainer.innerHTML = html;
@@ -91,7 +105,7 @@ function renderFinalContainer(html) {
 }
 
 function addItemToTab(itemId) {
-    const foodItemObj = menuArray.filter(item => item.id.toString() === itemId)[0]
+    const foodItemObj = menuArray.filter(item => item.id.toString() === itemId)[0];
     selectedItems.push({
         name:foodItemObj.name,
         price:foodItemObj.price,
@@ -122,7 +136,7 @@ function getTabHtml() {
             <p class="tab-price m-0 font-smythe-normal">$${item.price}</p>
         </div>
         `;
-    })
+    });
    
     // prepare the tab html
     let tabHtml = `
@@ -149,5 +163,5 @@ function addRating(rating) {
         if (+star.dataset.star <= +rating) {
             star.classList.add("checked");
         }
-    })
+    });
 }
